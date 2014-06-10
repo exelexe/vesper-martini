@@ -11,11 +11,11 @@ type Config struct {
   Dsn string
 }
 
-var c Config = parse()
+var Conf Config
 
 // json parser
-func parse() Config {
-  var c Config
+func init() {
+  var err error
   var filename string
 
   filename = "config/" + martini.Env + ".json"
@@ -26,14 +26,8 @@ func parse() Config {
     log.Println("ioutil.ReadFile error file: " + filename)
   }
 
-  err = json.Unmarshal(jsonString, &c)
+  err = json.Unmarshal(jsonString, &Conf)
   if err != nil {
     log.Println("json.Unmarshal error file: " + filename)
   }
-
-  return c
-}
-
-func Get() Config {
-  return c
 }
