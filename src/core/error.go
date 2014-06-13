@@ -1,11 +1,11 @@
 package core
 
 import (
-  "log"
+    "log"
 )
 
 func CheckFatal(err error, msg string) {
-  if err != nil {
-    log.Fatalln(msg, err)
-  }
+    if err != nil {
+        log.Fatalln(msg, err)
+    }
 }
