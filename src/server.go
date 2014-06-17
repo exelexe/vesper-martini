@@ -2,26 +2,18 @@ package main
 
 import (
     "app"
-    //    . "core/db"
     "github.com/go-martini/martini"
-    //    "log"
-    //    "schemas"
+    "github.com/codegangsta/martini-contrib/render"
 )
 
 func main() {
+    // setup middleware
     m := martini.Classic()
+    m.Use(render.Renderer())
 
-    // route handler
+    // setup routes
     m.Get("/hello", app.Hello)
     m.Get("/user/:id", app.FindUser)
-    /*
-       m.Get("/json/:id", func(params martini.Params) string {
-           var user schemas.User
-           DB.First(&user, params["id"])
-           log.Println(user)
-           //return "Hello " + params["id"]
-           return "name: " + user.Name
-       })
-    */
+
     m.Run()
 }
