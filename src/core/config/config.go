@@ -1,6 +1,7 @@
 package config
 
 import (
+	"core"
 	"encoding/json"
 	"github.com/go-martini/martini"
 	"io/ioutil"
@@ -18,16 +19,12 @@ func init() {
 	var err error
 	var filename string
 
-	filename = "config/" + martini.Env + ".json"
+	filename = "./config/" + martini.Env + ".jsonp"
 	log.Println("config file: " + filename)
 
 	jsonString, err := ioutil.ReadFile(filename)
-	if err != nil {
-		log.Println("ioutil.ReadFile error file: " + filename)
-	}
+	core.CheckFatal(err, "read error")
 
 	err = json.Unmarshal(jsonString, &Conf)
-	if err != nil {
-		log.Println("json.Unmarshal error file: " + filename)
-	}
+	core.CheckFatal(err, "parse error")
 }
