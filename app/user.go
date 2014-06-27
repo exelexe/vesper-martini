@@ -1,7 +1,7 @@
 package app
 
 import (
-	. "../core/db"
+	. "../core"
 	"github.com/codegangsta/martini-contrib/render"
 	"github.com/go-martini/martini"
 	"../schemas"

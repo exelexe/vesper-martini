@@ -1,7 +1,6 @@
-package config
+package core
 
 import (
-	"../../core"
 	"encoding/json"
 	"github.com/go-martini/martini"
 	"io/ioutil"
@@ -23,8 +22,8 @@ func init() {
 	log.Println("config file: " + filename)
 
 	jsonString, err := ioutil.ReadFile(filename)
-	core.CheckFatal(err, "read error")
+	CheckFatal(err, "read error")
 
 	err = json.Unmarshal(jsonString, &Conf)
-	core.CheckFatal(err, "parse error")
+	CheckFatal(err, "parse error")
 }

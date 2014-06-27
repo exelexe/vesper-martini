@@ -1,8 +1,6 @@
-package db
+package core
 
 import (
-	"../../core"
-	. "../config"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"log"
@@ -16,7 +14,7 @@ func init() {
 	log.Println("DB DataSource: " + Conf.Dsn)
 
 	DB, err = gorm.Open("mysql", Conf.Dsn)
-	core.CheckFatal(err, "Database connect error")
+	CheckFatal(err, "Database connect error")
 	DB.LogMode(true)
 
 	// DB, err = gorm.Open("postgres", "user=gorm dbname=gorm sslmode=disable")
