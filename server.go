@@ -1,7 +1,7 @@
 package main
 
 import (
-	"app"
+	"./app"
 	"github.com/codegangsta/martini-contrib/render"
 	"github.com/go-martini/martini"
 )

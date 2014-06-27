@@ -1,10 +1,10 @@
 package app
 
 import (
-	. "core/db"
+	. "../core/db"
 	"github.com/codegangsta/martini-contrib/render"
 	"github.com/go-martini/martini"
-	"schemas"
+	"../schemas"
 )
 
 func FindUser(params martini.Params, r render.Render) {

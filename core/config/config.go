@@ -1,7 +1,7 @@
 package config
 
 import (
-	"core"
+	"../../core"
 	"encoding/json"
 	"github.com/go-martini/martini"
 	"io/ioutil"
@@ -19,7 +19,7 @@ func init() {
 	var err error
 	var filename string
 
-	filename = "./config/" + martini.Env + ".jsonp"
+	filename = "./config/" + martini.Env + ".json"
 	log.Println("config file: " + filename)
 
 	jsonString, err := ioutil.ReadFile(filename)

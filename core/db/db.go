@@ -1,8 +1,8 @@
 package db
 
 import (
-	"core"
-	. "core/config"
+	"../../core"
+	. "../config"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"log"
