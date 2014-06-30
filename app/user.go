@@ -1,10 +1,10 @@
 package app
 
 import (
-	. "../core"
-	"github.com/codegangsta/martini-contrib/render"
 	"github.com/go-martini/martini"
-	"../schemas"
+	"github.com/codegangsta/martini-contrib/render"
+	. "github.com/h-miyamo/vesper-martini/core"
+	"github.com/h-miyamo/vesper-martini/schemas"
 )
 
 func FindUser(params martini.Params, r render.Render) {

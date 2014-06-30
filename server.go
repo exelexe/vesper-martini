@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./app"
-	"github.com/codegangsta/martini-contrib/render"
 	"github.com/go-martini/martini"
+	"github.com/codegangsta/martini-contrib/render"
+	"github.com/h-miyamo/vesper-martini/app"
 )
 
 func main() {
