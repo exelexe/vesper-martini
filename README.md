@@ -2,6 +2,12 @@ vesper-martini
 =====================
 **[go-martini/martini](https://github.com/go-martini/martini)** base web app
 
+Requirements
+------------
+* go version >= go1.2
+* port 3000
+* MySQL version >= 5.5
+
 Install
 -------
 `go get github.com/h-miyamo/vesper-martini`
