@@ -2,8 +2,21 @@ vesper-martini
 =====================
 **[go-martini/martini](https://github.com/go-martini/martini)** base web app
 
+Install
+-------
+`go get github.com/h-miyamo/vesper-martini`
+
+Routes
+------
+```
+| uri           | detail            |
+| ------------- | ----------------- |
+| /hello        | print "hello"     |
+| /user/:id     | find users.id     |
+```
+
 Used Package
-=====================
+------------
 ```
 go get github.com/go-martini/martini
 go get github.com/codegangsta/martini-contrib/render
@@ -12,7 +25,7 @@ go get github.com/jinzhu/gorm
 ```
 
 SQL
-=====================
+---
 ```
 CREATE DATABASE `practice` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
