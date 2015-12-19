@@ -10,7 +10,7 @@ Requirements
 
 Install
 -------
-`go get github.com/h-miyamo/vesper-martini`
+`go get github.com/exelexe/vesper-martini`
 
 Routes
 ------
